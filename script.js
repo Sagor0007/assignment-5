@@ -1,34 +1,39 @@
 function busTicket(){
 
-  const btn = document.getElementsByClassName('add-btn');
-    let count = 0;
-  for(const bttn of btn){
-    bttn.addEventListener('click', function(e){
-      count = count - 1;
-      document.getElementById('bus-co').innerText = count;
-  const btnName = (e.target.childNodes[1].innerText);
+//   const btn = document.getElementsByClassName('add-btn');
+//     let count = 0;
+//   for(const bttn of btn){
+//     bttn.addEventListener('click', function(e){
+//       count = count - 1;
+//       document.getElementById('bus-co').innerText = count;
+//   const btnName = (e.target.childNodes[1].innerText);
 
- const economys = document.getElementById('economy');
-const li = document.createElement('li')
- const p = document.createElement('p');
- p.innerText = btnName;
- const p2 = document.createElement('p');
- p2.innerText = '';
- li.appendChild(p);
- li.appendChild(p2);
+//  const economys = document.getElementById('economy');
+// const li = document.createElement('li')
+//  const p = document.createElement('p');
+//  p.innerText = btnName;
+//  const p2 = document.createElement('p');
+//  p2.innerText = '';
+//  li.appendChild(p);
+//  li.appendChild(p2);
 
- economys.appendChild(li);
-
-
-      addElement(e.target.classList.add('bg-green-400'));
+//  economys.appendChild(li);
 
 
-    })
-  }
+//       addElement(e.target.classList.add('bg-green-400'));
+
+
+//     })
+//   }
+
+
+// jjjjjjjjjjjjjjjjjjjjjjjjj
  
+
   
     hideElement('first-section');
     hideElement('first-scound-section');
+   
     removeElement('middle-section');
     removeElement('footer-section');
     removeElement('navbar-section');
@@ -47,6 +52,8 @@ const li = document.createElement('li')
     hideElement('first-section');
     hideElement('first-scound-section');
     hideElement('hr-section');
+
+    
    
     
   }
@@ -68,17 +75,46 @@ function addElement(elmentid){
   
 }
 
+
+
+
 //count strat
 const allBtn = document.getElementsByClassName("add-btn");
 console.log(allBtn)
 
 let count = 40;
+let counts = 0;
 
 for (const btn of allBtn) {
   btn.addEventListener("click", function (e) {
     count -= 1;
     document.getElementById('bus-count')
     .innerText = count;
+
+    counts += 1;
+    document.getElementById('bus-co')
+    .innerText = counts;
+
+    addElement(e.target.classList.add('bg-green-400'));
+   
+
+
+
+
+
+    const economys = document.getElementById('economy');
+    const li = document.createElement('li')
+     const p = document.createElement('p');
+     p.innerText = btnName;
+     const p2 = document.createElement('p');
+     p2.innerText = '';
+     li.appendChild(p);
+     li.appendChild(p2);
+    
+     economys.appendChild(li);
+    
+
+    
   })
 }
 
